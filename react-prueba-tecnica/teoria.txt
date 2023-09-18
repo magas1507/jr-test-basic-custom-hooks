@@ -1,0 +1,18 @@
+Si te piden iniciar la prueba solo con javascript
+-instalas vite sólo con javascript
+- instala los plugiins de react :
+  -React para vite: npm install @vitejs/plugin-react -E
+  -reacy y react-dom: npm install react react-dom -E
+
+- Agregas en el main.js que es tu punto de entrada:
+import { createRoot} from 'react-dom/client'; // me traigo el create root
+const root = createRoot(document.getElementById('app')); // realizo un getElementById que es donde se renderiza la app
+root.render(<h1>Hello mundo</h1>) 
+
+- NO OLVIDES de instalar lint
+  - npm install standard -D
+
+  -agregas en el package.json
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
+  }
